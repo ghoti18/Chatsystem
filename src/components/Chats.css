@@ -1,0 +1,260 @@
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+h2 {
+  text-align: center;
+}
+
+.chat-window {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: stretch;
+}
+
+.chat-window::-webkit-scrollbar {
+  display: none;
+}
+
+.welcome-screen {
+  text-align: center;
+  margin-top: 20vh;
+  color: #888;
+}
+
+.message-row {
+  display: flex;
+  width: 100%;
+}
+
+.message-row.user {
+  justify-content: flex-end;
+}
+
+.message-row.friend {
+
+  justify-content: flex-start;
+}
+
+.message-bubble {
+  max-width: 70%;
+  padding: 10px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  line-height: 1.4;
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  display: inline-flex;
+}
+
+.message-row.user .message-bubble {
+  background-color: #8400ff;
+  color: #ffffff;
+  border-bottom-right-radius: 4px;
+  border: ridge 0.5px;
+}
+
+.message-row.friend .message-bubble {
+  background-color: #f1f1f1;
+  color: #333;
+  border-bottom-left-radius: 4px;
+}
+
+.chat-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 12px;
+  object-fit: cover;
+  display: block;
+}
+
+.input-area {
+  padding: 16px;
+  background: white;
+}
+
+.input-bar {
+  display: flex;
+  align-items: center;
+  background-color: #f8f9fa;
+  padding: 10px 16px;
+  border-radius: 20px;
+  border: 1px solid #eee;
+  gap: 12px;
+}
+
+.input-placeholder {
+  flex: 1;
+  color: #999;
+  font-size: 14px;
+}
+
+.icon-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  gap: 4px;
+  min-width: 50px;
+  transition: opacity 0.2s ease;
+}
+
+.icon-group:hover {
+  opacity: 0.7;
+}
+
+.icon-label {
+  font-size: 10px;
+  font-weight: 600;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.vertical-divider {
+  width: 1px;
+  height: 24px;
+  background-color: #ddd;
+  margin: 0 10px;
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  opacity: 0.7;
+}
+
+.icon-btn img {
+  width: 22px;
+  height: 22px;
+}
+
+.icon-btn:hover {
+  opacity: 1;
+}
+
+.chat-input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+}
+
+.send-btn {
+  padding: 10px 16px;
+  background: rgba(255, 255, 255, 0.096);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.send-btn img {
+  width: 30px;
+  height: 30px;
+  opacity: 0.8;
+  transition: 0.2s;
+}
+
+.send-btn:hover img {
+  opacity: 1;
+}
+
+.friends-list {
+  height: 90vh;
+  max-width: 200px;
+  margin: 0;
+  background-color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  position: fixed;
+  left: 10px;
+  top: 50px;
+  overflow-y: auto;
+}
+
+.friends-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.friends-list li {
+  cursor: pointer;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.friends-list li:hover {
+  background-color: #f5f5f5;
+}
+
+/* ── Categorized groups ── */
+
+.friends-role-group {
+  margin-bottom: 8px;
+}
+
+.friends-role-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: #aaa;
+  padding: 8px 10px 4px;
+  margin: 0;
+  border-top: 1px solid #eee;
+}
+
+.friends-course-group {
+  margin-bottom: 2px;
+}
+
+.friends-course-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #777;
+  padding: 4px 12px 2px;
+  margin: 0;
+}
+
+.friends-section-group {
+  margin-bottom: 2px;
+}
+
+.friends-section-label {
+  display: block;
+  font-size: 0.68rem;
+  color: #bbb;
+  padding: 2px 18px;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.friends-item {
+  display: flex;
+  flex-direction: column;
+  padding: 7px 20px;
+  font-size: 0.88rem;
+  color: #333;
+  border-bottom: 1px solid #f0f0f0;
+  transition: background-color 0.15s ease;
+}
+
+.friends-item:hover {
+  background-color: #f5f5f5;
+}
